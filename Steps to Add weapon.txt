@@ -1,0 +1,18 @@
+Avere una Skeletal Mesh per il component (con un socket barrelSocket per la direzione dello sparo da mettere dentro lo SCHELETRO, non skeletal mesh)
+Avere una Static Mesh per il PickUpActor e crearne una collisione semplice (da dentro la static mesh stessa)
+
+Avere un socket nel personaggio per equipaggiare l'arma
+
+Create a child of DA_ItemBase
+
+Aggiungere se necessario a Enum_WeaponType il tipo di arma
+
+Creare un child di BP_WeaponMaster e inserire: Skeletal Mesh - ItemData - GetItemData (interfaccia)
+Creare un child di BP_WeaponPickup e inserire: Static Mesh - Weapon Data - Weapon to Spawn - GetItemData (interfaccia)
+
+Popolare DA_Child creato prima
+
+Dentro CBP_SandboxCharacter modificare la key di interazione con l'holster specificato, specificando l'overlay pose, lo slot name e l'item blueprint
+
+
+(Manca la logica di nuove animazioni)
